@@ -2,9 +2,12 @@ package com.example.retroclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,13 +31,21 @@ public class OwnerDisplay extends AppCompatActivity {
         listview = (ListView) findViewById(R.id.lv);
         textView=(TextView)findViewById(R.id.textView);
 
+        Button btnAddUser = (Button) findViewById(R.id.btnAddUser);
+
         LoginService loginService =
                 ServiceGenerator.createService(LoginService.class);
 
+        btnAddUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OwnerDisplay.this, OwnerActivity.class);
+                intent.putExtra("user_name", "");
+                startActivity(intent);
+            }
+        });
 
         Call<List<Owner>> call = loginService.getOwner();
-
-
 
         call.enqueue(new Callback<List<Owner>>() {
             @Override
@@ -45,9 +56,11 @@ public class OwnerDisplay extends AppCompatActivity {
 
                 //looping through all the heroes and inserting the names inside the string array
                 for (int i = 0; i < ownerList.size(); i++) {
-                    owners[i] = ownerList.get(i).getFirstname();
+                    owners[i] = ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getFlatno();
+
                 }
                 listview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, owners));
+
 
             }
 

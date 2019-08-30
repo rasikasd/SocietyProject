@@ -1,23 +1,23 @@
 package com.example.retroclient;
 
+import static java.sql.Types.NULL;
+
 public class Owner {
-    private int id;
+
     private String firstname;
     private String lastname;
+    private String flatno;
 
-    public Owner(int id, String firstname, String lastname) {
-        this.id = id;
+    public Owner( String firstname, String lastname) {
+
         this.firstname = firstname;
         this.lastname = lastname;
     }
 
-    public int getId() {
-        return id;
+    public Owner() {
+
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getFirstname() {
         return firstname;
@@ -33,5 +33,12 @@ public class Owner {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getFlatno() {
+        return flatno;
+    }
+    public void setFlatno(String flatno) {
+        this.flatno = flatno;
     }
 }
