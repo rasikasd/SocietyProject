@@ -7,11 +7,15 @@ public class Owner {
     private String firstname;
     private String lastname;
     private String flatno;
+    private int id;
 
-    public Owner( String firstname, String lastname) {
+
+
+    public Owner(int id , String firstname, String lastname) {
 
         this.firstname = firstname;
         this.lastname = lastname;
+        this.id=id;
     }
 
     public Owner() {
@@ -38,7 +42,26 @@ public class Owner {
     public String getFlatno() {
         return flatno;
     }
+
     public void setFlatno(String flatno) {
         this.flatno = flatno;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Owner{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", flatno='" + flatno + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

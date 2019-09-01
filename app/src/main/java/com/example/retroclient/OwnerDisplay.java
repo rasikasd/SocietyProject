@@ -32,9 +32,19 @@ public class OwnerDisplay extends AppCompatActivity {
         textView=(TextView)findViewById(R.id.textView);
 
         Button btnAddUser = (Button) findViewById(R.id.btnAddUser);
+        Button btnUpdateUser = (Button) findViewById(R.id.btnUpdateUser);
 
         LoginService loginService =
                 ServiceGenerator.createService(LoginService.class);
+
+        btnUpdateUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OwnerDisplay.this, UpdateOwnerActivity.class);
+                intent.putExtra("user_name", "");
+                startActivity(intent);
+            }
+        });
 
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +66,7 @@ public class OwnerDisplay extends AppCompatActivity {
 
                 //looping through all the heroes and inserting the names inside the string array
                 for (int i = 0; i < ownerList.size(); i++) {
-                    owners[i] = ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getFlatno();
+                    owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getFlatno();
 
                 }
                 listview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, owners));

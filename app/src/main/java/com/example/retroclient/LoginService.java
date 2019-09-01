@@ -18,6 +18,9 @@ public interface LoginService {
     @GET("/all")
     Call<List<Owner>> getOwner();
 
+    @GET("/owner/{id}")
+    Call<Owner> getOwnerById(@Path("id") int id);
+
     @POST("/owner")
     Call<Owner> addOwner(@Body Owner owner);
 
