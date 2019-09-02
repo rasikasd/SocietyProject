@@ -69,8 +69,9 @@ public class OwnerDisplay extends AppCompatActivity {
                     owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getFlatno();
 
                 }
-                listview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, owners));
+              //  listview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, owners));
 
+                listview.setAdapter(new OwnerAdapter(OwnerDisplay.this, R.layout.list_owner, ownerList));
 
             }
 

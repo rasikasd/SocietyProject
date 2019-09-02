@@ -7,101 +7,157 @@
     tools:context=".OwnerActivity">
 
 
+    <TextView
+        android:id="@+id/txtUId"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="ID"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <EditText
+        android:id="@+id/edtUId"
+        android:layout_width="268dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
 
     <TextView
         android:id="@+id/txtUFirstname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="270dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="FIRST NAME"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.204" />
 
     <EditText
         android:id="@+id/edtFirstname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="268dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.286" />
 
     <TextView
         android:id="@+id/txtULastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="291dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="LAST NAME"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <EditText
         android:id="@+id/edtLastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="287dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.453" />
 
     <TextView
         android:id="@+id/txtUFlatno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="FLAT NO"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintVertical_bias="0.556" />
 
     <EditText
         android:id="@+id/edtFlatno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="294dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.636" />
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="#32CD32"
         android:text="Save"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintVertical_bias="0.756" />
 
     <Button
         android:id="@+id/btnDel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
+        android:layout_width="309dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="#FF0000"
         android:text="Delete User"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="@+id/btnSave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.873" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

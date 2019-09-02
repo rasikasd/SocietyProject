@@ -32,7 +32,7 @@ public class UpdateOwnerActivity extends AppCompatActivity {
 
         loginService = ServiceGenerator.createService(LoginService.class);
 
-        /*btnFetchOwner.setOnClickListener(new View.OnClickListener() {
+        btnFetchOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -46,8 +46,8 @@ public class UpdateOwnerActivity extends AppCompatActivity {
 
             }
             });
-           Owner o = new Owner();
-            Call<List<Owner>> call = loginService.getOwner();
+                Owner o = new Owner();
+                Call<List<Owner>> call = loginService.getOwner();
                call.enqueue(new Callback<List<Owner>>() {
                     @Override
                     public void onResponse(Call<List<Owner>>call, Response<List<Owner>> response) {
@@ -70,7 +70,7 @@ public class UpdateOwnerActivity extends AppCompatActivity {
 
                         Log.d("Error", t.getMessage());
                     }
-                });*/
+                });
 
     }
 }
