@@ -73,12 +73,13 @@ public class OwnerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Owner o = new Owner();
 
-                o.setId(Integer.parseInt(Id));
+
                 o.setFirstname(edtFirstname.getText().toString());
                 o.setLastname(edtLastname.getText().toString());
                 o.setFlatno(edtFlatno.getText().toString());
                 if(Id != null && Id.trim().length() > 0){
                     //update user
+                    o.setId(Integer.parseInt(Id));
                     System.out.println(Id);
                     updateUser(Integer.parseInt(Id), o);
                 }
@@ -117,6 +118,17 @@ public class OwnerActivity extends AppCompatActivity {
         });
 
 
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteUser(Integer.parseInt(Id));
+
+                Intent intent = new Intent(OwnerActivity.this, OwnerDisplay.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
@@ -129,6 +141,25 @@ public class OwnerActivity extends AppCompatActivity {
             public void onResponse(Call<Owner> call, Response<Owner> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(OwnerActivity.this, "User updated successfully!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(OwnerActivity.this, OwnerDisplay.class);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Owner> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
+    }
+
+    public void deleteUser(int id){
+        Call<Owner> call = loginService.deleteOwner(id);
+        call.enqueue(new Callback<Owner>() {
+            @Override
+            public void onResponse(Call<Owner> call, Response<Owner> response) {
+                if(response.isSuccessful()){
+                    Toast.makeText(OwnerActivity.this, "User deleted successfully!", Toast.LENGTH_SHORT).show();
                 }
             }
 
