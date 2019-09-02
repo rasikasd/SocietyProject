@@ -66,8 +66,10 @@ public class OwnerDisplay extends AppCompatActivity {
 
                 //looping through all the heroes and inserting the names inside the string array
                 for (int i = 0; i < ownerList.size(); i++) {
-                    owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getFlatno();
+                    //Log.d("Owner bills: ",owners[i]);
+                    owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getBills();
 
+                    System.out.println(owners[i]);
                 }
               //  listview.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, owners));
 

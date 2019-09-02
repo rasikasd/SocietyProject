@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class OwnerAdapter extends ArrayAdapter<Owner> {
@@ -26,16 +27,20 @@ public class OwnerAdapter extends ArrayAdapter<Owner> {
 
     @Override
     public View getView(final int pos, View convertView, ViewGroup parent){
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate( R.layout.list_owner, parent, false);
 
         TextView txtUserId = (TextView) rowView.findViewById(R.id.txtUserId);
         TextView txtUsername = (TextView) rowView.findViewById(R.id.txtUsername);
         TextView txtUFlatno = (TextView) rowView.findViewById(R.id.txtUFlatno);
+        TextView txtBillId = (TextView) rowView.findViewById(R.id.txtBillId);
 
         txtUserId.setText(String.format("#ID: %d", owners.get(pos).getId()));
         txtUFlatno.setText(String.format("FlatNo: %s", owners.get(pos).getFlatno()));
         txtUsername.setText(String.format("NAME: %s", owners.get(pos).getFirstname()+" "+owners.get(pos).getLastname()));
+        txtBillId.setText(String.format("BillNo: %s", owners.get(pos).getBills()));
+       //txtUFlatno.setText(String.format("FlatNo: %s", owners.get(pos).getFlatno()));
+
 
 
       //  Log.d("Owner info:- ",owners.get(1).getFirstname());
@@ -45,6 +50,7 @@ public class OwnerAdapter extends ArrayAdapter<Owner> {
             public void onClick(View v) {
                 //start Activity User Form
                 Intent intent = new Intent(context, OwnerActivity.class);
+
                 intent.putExtra("Owner_id", String.valueOf(owners.get(pos).getId()));
                 intent.putExtra("Owner_Firstname", owners.get(pos).getFirstname());
                 intent.putExtra("Owner_Lastname", owners.get(pos).getLastname());

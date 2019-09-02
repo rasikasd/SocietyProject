@@ -8,22 +8,27 @@
 
     <TextView
         android:id="@+id/txtUserId"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_width="385dp"
+        android:layout_height="50dp"
         android:padding="3dp" />
 
     <TextView
         android:id="@+id/txtUFlatno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        />
+        android:layout_width="379dp"
+        android:layout_height="46dp"
+        android:padding="3dp" />
 
     <TextView
         android:id="@+id/txtUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="3dp"
-        />
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/txtBillId"
+        android:layout_width="381dp"
+        android:layout_height="157dp"
+        android:padding="3dp" />
+
 
 </LinearLayout>

@@ -1,5 +1,12 @@
 package com.example.retroclient;
 
+import java.util.HashSet;
+import java.util.Set;
+
+
+//import javax.persistence.CascadeType;
+//import javax.persistence.OneToMany;
+
 import static java.sql.Types.NULL;
 
 public class Owner {
@@ -22,6 +29,8 @@ public class Owner {
 
     }
 
+    //@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private Set<Bill> bills = new HashSet<>();
 
     public String getFirstname() {
         return firstname;
@@ -55,7 +64,26 @@ public class Owner {
         this.id = id;
     }
 
+    public Set<Bill> getBills() {
+        return bills;
+    }
+
+    public void setBills(Set<Bill> bills) {
+        this.bills = bills;
+    }
+
     @Override
+    public String toString() {
+        return "Owner{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", flatno='" + flatno + '\'' +
+                ", id=" + id +
+                ", bills=" + bills +
+                '}';
+    }
+
+    /* @Override
     public String toString() {
         return "Owner{" +
                 "firstname='" + firstname + '\'' +
@@ -64,4 +92,5 @@ public class Owner {
                 ", id=" + id +
                 '}';
     }
+    */
 }

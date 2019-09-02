@@ -27,6 +27,7 @@ public class OwnerActivity extends AppCompatActivity {
     EditText edtFlatno;
     Button btnSave;
     Button btnDel;
+   // Button btnShowBill;
     TextView txtUId;
 
     @Override
@@ -128,6 +129,16 @@ public class OwnerActivity extends AppCompatActivity {
             }
         });
 
+     /*   btnShowBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+               // Intent intent = new Intent(OwnerActivity.this, OwnerDisplay.class);
+               // startActivity(intent);
+            }
+        });*/
 
 
     }
