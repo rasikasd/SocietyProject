@@ -30,4 +30,8 @@ public interface LoginService {
     @DELETE("/delete/{id}")
     Call<Owner> deleteOwner(@Path("id") int id);
 
+    @POST("/genbill")
+    Call<BillGen> generateBill(@Body BillGen billgen);
+
+
 }

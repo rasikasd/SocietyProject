@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OwnerActivity">
-
+    tools:context=".AddReceipt">
 
     <TextView
-        android:id="@+id/txtUId"
-        android:layout_width="281dp"
-        android:layout_height="46dp"
+        android:id="@+id/txtUOid"
+        android:layout_width="299dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="ID"
+        android:text="Owner Id"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +22,7 @@
         app:layout_constraintVertical_bias="0.029" />
 
     <EditText
-        android:id="@+id/edtUId"
+        android:id="@+id/edtOid"
         android:layout_width="296dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
@@ -37,22 +36,23 @@
         app:layout_constraintVertical_bias="0.113" />
 
     <TextView
-        android:id="@+id/txtUFirstname"
+        android:id="@+id/txtUAmount"
         android:layout_width="297dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="FIRST NAME"
+        android:text="Amount"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/edtFirstname"
+        android:id="@+id/edtAmount"
         android:layout_width="295dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -66,13 +66,13 @@
         app:layout_constraintVertical_bias="0.286" />
 
     <TextView
-        android:id="@+id/txtULastname"
+        android:id="@+id/txtUPaymentType"
         android:layout_width="291dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="LAST NAME"
+        android:text="Payment Method"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.377" />
 
     <EditText
-        android:id="@+id/edtLastname"
+        android:id="@+id/edtPaymentType"
         android:layout_width="287dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
@@ -90,19 +90,18 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.453" />
 
     <TextView
-        android:id="@+id/txtUFlatno"
+        android:id="@+id/txtUPaymentDet"
         android:layout_width="294dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="FLAT NO"
+        android:text="Payment Details"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +110,7 @@
         app:layout_constraintVertical_bias="0.556" />
 
     <EditText
-        android:id="@+id/edtFlatno"
+        android:id="@+id/edtPaymentDet"
         android:layout_width="294dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
@@ -124,42 +123,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.636" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="312dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#5f27cd"
-        android:text="Save"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.602"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
 
     <Button
-        android:id="@+id/btnDel"
+        android:id="@+id/btnAddPayment"
         android:layout_width="309dp"
-        android:layout_height="61dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#FF0000"
-        android:text="Delete User"
+        android:background="#3867d6"
+        android:text="Add Receipt"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.896" />
-
+        app:layout_constraintVertical_bias="0.756" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

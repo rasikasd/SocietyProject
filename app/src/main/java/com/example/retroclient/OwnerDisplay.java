@@ -32,19 +32,13 @@ public class OwnerDisplay extends AppCompatActivity {
         textView=(TextView)findViewById(R.id.textView);
 
         Button btnAddUser = (Button) findViewById(R.id.btnAddUser);
+        Button btnGenerateBill = (Button) findViewById(R.id.btnGenerateBill);
        // Button btnUpdateUser = (Button) findViewById(R.id.btnUpdateUser);
 
         LoginService loginService =
                 ServiceGenerator.createService(LoginService.class);
 
-        /*btnUpdateUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(OwnerDisplay.this, UpdateOwnerActivity.class);
-                intent.putExtra("user_name", "");
-                startActivity(intent);
-            }
-        });*/
+
 
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +74,15 @@ public class OwnerDisplay extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Owner>> call, Throwable t) {
 
+            }
+        });
+
+        btnGenerateBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OwnerDisplay.this, GenBill.class);
+                intent.putExtra("user_name", "");
+                startActivity(intent);
             }
         });
 
