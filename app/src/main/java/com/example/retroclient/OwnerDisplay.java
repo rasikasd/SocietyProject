@@ -33,6 +33,7 @@ public class OwnerDisplay extends AppCompatActivity {
 
         Button btnAddUser = (Button) findViewById(R.id.btnAddUser);
         Button btnGenerateBill = (Button) findViewById(R.id.btnGenerateBill);
+        Button btnAddReceipt = (Button)findViewById(R.id.btnAddReceipt);
        // Button btnUpdateUser = (Button) findViewById(R.id.btnUpdateUser);
 
         LoginService loginService =
@@ -87,5 +88,12 @@ public class OwnerDisplay extends AppCompatActivity {
         });
 
 
+        btnAddReceipt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OwnerDisplay.this, AddReceipt.class);
+                startActivity(intent);
+            }
+        });
     }
 }

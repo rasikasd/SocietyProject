@@ -33,5 +33,13 @@ public interface LoginService {
     @POST("/genbill")
     Call<BillGen> generateBill(@Body BillGen billgen);
 
+    @GET("/allreceipts")
+    Call<Receipt>getAllReceipts();
+
+    @GET("/receipts/{id}")
+    Call<Receipt>getReceipt();
+
+    @POST("/receipt/{oid}/{bid}")
+    Call<Receipt>addReceipt(@Path("oid") int oid,@Path("bid") int bid,@Body Receipt receipt);
 
 }
