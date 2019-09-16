@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -55,6 +58,10 @@ public class AddReceipt extends AppCompatActivity {
                 r.setPaymentdetail(edtPaymentDet.getText().toString());
                 r.setPaymenttype(edtPaymentType.getText().toString());
 
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                Date rcpdt = new Date();
+
+                r.setRcptdate(sdf.format(rcpdt));
                 System.out.println("Receipt date : "+r);
                 Call<Receipt> call = loginService.addReceipt(ownerid,billid,r);
                 call.enqueue(new Callback<Receipt>() {

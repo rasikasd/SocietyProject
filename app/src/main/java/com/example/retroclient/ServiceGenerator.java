@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
 
-    public static final String API_BASE_URL = "http://192.168.100.4:8080/";
+    public static final String API_BASE_URL = "http://192.168.43.245:8080/";
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 

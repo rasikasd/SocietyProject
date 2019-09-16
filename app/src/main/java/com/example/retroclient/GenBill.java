@@ -44,18 +44,19 @@ public class GenBill extends AppCompatActivity {
 
                 BillGen bg = new BillGen();
 
-               SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+               SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+                SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
                 try {
 
-                    Date edate = sdf.parse(edtBillED.getText().toString());
-                    Date sdate = sdf.parse(edtBillSD.getText().toString().trim());
+                    Date edate = sdf.parse(edtBillED.getText().toString()+"T00:00:00");
+                    Date sdate = sdf.parse(edtBillSD.getText().toString().trim()+"T00:00:00");
 
                     String edate1 = sdf.format(edate);
                     String sdate1 = sdf.format(sdate);
-
-                    bg.setBillgenend(edate1);
-                    bg.setBillgenstart(sdate1);
+                    bg.setBillgenend(edtBillED.getText().toString()+"T00:00:00");
+                    bg.setBillgenstart(edtBillSD.getText().toString().trim()+"T00:00:00");
+                    //bg.setBillgenend(edate1);
+                    //bg.setBillgenstart(sdate1);
                     bg.setId(0);
 
                     System.out.println(edate1);

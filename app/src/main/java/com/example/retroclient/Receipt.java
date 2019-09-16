@@ -6,7 +6,7 @@ public class Receipt {
 
     private Integer	id;
     private Float paidamt;
-    private Date rcptdate;
+    private String rcptdate;
     private String paymenttype;
     private String paymentdetail;
     private Owner owner;
@@ -31,11 +31,11 @@ public class Receipt {
         this.paidamt = paidamt;
     }
 
-    public Date getRcptdate() {
+    public String getRcptdate() {
         return rcptdate;
     }
 
-    public void setRcptdate(Date rcptdate) {
+    public void setRcptdate(String rcptdate) {
         this.rcptdate = rcptdate;
     }
 

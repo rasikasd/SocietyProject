@@ -62,7 +62,7 @@ public class OwnerDisplay extends AppCompatActivity {
                 //looping through all the heroes and inserting the names inside the string array
                 for (int i = 0; i < ownerList.size(); i++) {
                     //Log.d("Owner bills: ",owners[i]);
-                    owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname()+" flatno= "+ownerList.get(i).getBills();
+                    owners[i] =ownerList.get(i).getId()+ " "+ ownerList.get(i).getFirstname()+" "+ownerList.get(i).getLastname();
 
                     System.out.println(owners[i]);
                 }
