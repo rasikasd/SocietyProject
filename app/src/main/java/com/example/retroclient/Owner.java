@@ -1,7 +1,10 @@
 package com.example.retroclient;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 //import javax.persistence.CascadeType;
@@ -83,6 +86,25 @@ public class Owner {
                 '}';
     }
 
+    public Bill getBill(){
+
+        Set<Bill> billset = getBills();
+
+            Integer maxid = 0;
+            if (!billset.isEmpty()) {
+                for (Bill b : billset) {
+                    if (maxid < b.getId()) {
+                        maxid = b.getId();
+                    }
+                }
+                for(Bill b: billset) {
+                    if (b.getId() == maxid) {
+                        return b;
+                    }
+                }
+            }
+                return null;
+    }
     /* @Override
     public String toString() {
         return "Owner{" +

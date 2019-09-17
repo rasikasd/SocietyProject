@@ -127,18 +127,24 @@ public class Bill
 
     @Override
     public String toString() {
-        return "Bill{" +
-                "id=" + id +
-                ", billamount=" + billamount +
-                ", prevbillamt=" + prevbillamt +
-                ", payment=" + payment +
-                ", adjustment=" + adjustment +
-                ", currcharges=" + currcharges +
-                ", totalamt=" + totalamt +
-                ", billdate=" + billdate +
-                ", duedate=" + duedate +
-                ", owner=" + owner +
-                '}';
+        return
+                "\n"+
+                "INVOICE ID : " + id +
+                "\n"+
+                "Bill Amount = " + billamount +
+                "\n"+
+                "Previous Bill = " + prevbillamt +
+                "\n"+
+                "Current Charges = " + currcharges +
+                "\n"+
+                "Billdate : " + billdate +
+                "\n"+
+                "Pay till : " + duedate +
+                "\n"+
+                "Total Amount =" + totalamt +
+                "\n"+
+                "Paid amount = " + payment +
+                "\n";
     }
 }
 

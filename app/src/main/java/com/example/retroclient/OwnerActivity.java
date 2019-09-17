@@ -26,9 +26,9 @@ public class OwnerActivity extends AppCompatActivity {
     EditText edtLastname;
     EditText edtFlatno;
     Button btnSave;
-    Button btnDel;
+
    // Button btnShowBill;
-    TextView txtUId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +38,13 @@ public class OwnerActivity extends AppCompatActivity {
         setTitle("Owners");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        txtUId = (TextView) findViewById(R.id.txtUId);
+
         edtUId = (EditText) findViewById(R.id.edtUId);
         edtFirstname = (EditText) findViewById(R.id.edtFirstname);
         edtLastname = (EditText) findViewById(R.id.edtLastname);
         edtFlatno = (EditText) findViewById(R.id.edtFlatno);
         btnSave = (Button) findViewById(R.id.btnSave);
-        btnDel = (Button) findViewById(R.id.btnDel);
+
 
         loginService = ServiceGenerator.createService(LoginService.class);
 
@@ -63,9 +63,8 @@ public class OwnerActivity extends AppCompatActivity {
         if(Id != null && Id.trim().length() > 0 ){
             edtUId.setFocusable(false);
         } else {
-            txtUId.setVisibility(View.INVISIBLE);
             edtUId.setVisibility(View.INVISIBLE);
-            btnDel.setVisibility(View.INVISIBLE);
+
         }
 
 
@@ -119,15 +118,6 @@ public class OwnerActivity extends AppCompatActivity {
         });
 
 
-        btnDel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                deleteUser(Integer.parseInt(Id));
-
-                Intent intent = new Intent(OwnerActivity.this, OwnerDisplay.class);
-                startActivity(intent);
-            }
-        });
 
      /*   btnShowBill.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,21 +154,5 @@ public class OwnerActivity extends AppCompatActivity {
         });
     }
 
-    public void deleteUser(int id){
-        Call<Owner> call = loginService.deleteOwner(id);
-        call.enqueue(new Callback<Owner>() {
-            @Override
-            public void onResponse(Call<Owner> call, Response<Owner> response) {
-                if(response.isSuccessful()){
-                    Toast.makeText(OwnerActivity.this, "User deleted successfully!", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Owner> call, Throwable t) {
-                Log.e("ERROR: ", t.getMessage());
-            }
-        });
-    }
 
 }

@@ -16,7 +16,10 @@
         <activity android:name=".GenBill" />
         <activity android:name=".OwnerActivity" />
         <activity android:name=".OwnerDisplay" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".Screenactivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
