@@ -8,6 +8,7 @@ public class BillGen {
     private String billgenstart;
     private String billgenend;
     private Integer totalgenbill;
+    private Integer billfreq;
     public Integer getId() {
         return id;
     }
@@ -40,6 +41,14 @@ public class BillGen {
         this.totalgenbill = totalgenbill;
     }
 
+    public Integer getBillfreq() {
+        return billfreq;
+    }
+
+    public void setBillfreq(Integer billfreq) {
+        this.billfreq = billfreq;
+    }
+
     @Override
     public String toString() {
         return "BillGen{" +
@@ -47,6 +56,7 @@ public class BillGen {
                 ", billgenstart='" + billgenstart + '\'' +
                 ", billgenend='" + billgenend + '\'' +
                 ", totalgenbill=" + totalgenbill +
+                ", billfreq=" + billfreq +
                 '}';
     }
 }

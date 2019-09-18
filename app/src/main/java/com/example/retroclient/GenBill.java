@@ -23,7 +23,8 @@ public class GenBill extends AppCompatActivity {
 
     LoginService loginService;
     EditText edtBillSD;
-    EditText edtBillED;
+   // EditText edtBillED;
+    EditText edtFreq;
     Button btnGenBill;
 
     @Override
@@ -33,7 +34,8 @@ public class GenBill extends AppCompatActivity {
 
 
         edtBillSD = (EditText) findViewById(R.id.edtBillSD);
-        edtBillED = (EditText) findViewById(R.id.edtBillED);
+       // edtBillED = (EditText) findViewById(R.id.edtBillED);
+        edtFreq = (EditText) findViewById(R.id.edtFreq);
         btnGenBill = (Button) findViewById(R.id.btnGenBill);
 
         loginService = ServiceGenerator.createService(LoginService.class);
@@ -48,18 +50,20 @@ public class GenBill extends AppCompatActivity {
                 SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
                 try {
 
-                    Date edate = sdf.parse(edtBillED.getText().toString()+"T00:00:00");
+                 //   Date edate = sdf.parse(edtBillED.getText().toString()+"T00:00:00");
                     Date sdate = sdf.parse(edtBillSD.getText().toString().trim()+"T00:00:00");
 
-                    String edate1 = sdf.format(edate);
+                   // String edate1 = sdf.format(edate);
                     String sdate1 = sdf.format(sdate);
-                    bg.setBillgenend(edtBillED.getText().toString()+"T00:00:00");
+                   // bg.setBillgenend(edtBillED.getText().toString()+"T00:00:00");
                     bg.setBillgenstart(edtBillSD.getText().toString().trim()+"T00:00:00");
+                    bg.setBillfreq(Integer.parseInt(edtFreq.getText().toString()));
                     //bg.setBillgenend(edate1);
                     //bg.setBillgenstart(sdate1);
                     bg.setId(0);
 
-                    System.out.println(edate1);
+                   // System.out.println(edate1);
+                    System.out.println("............Bill Freq....."+Integer.parseInt(edtFreq.getText().toString()));
 
                 } catch (ParseException e) {
                     e.printStackTrace();
